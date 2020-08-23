@@ -1,12 +1,17 @@
-body {
+body, button {
     font-size: large;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
 }
 #converter {
     position: absolute;
     right: 40%;
     margin-top: 100px;
 }
-button, select, option {
+#weight, #volume, #temperature {
+    margin-left: -6px;
+}
+select, option {
     font-size: large;
     padding-left: 7.5px;
     padding-right: 7.5px;
