@@ -1,3 +1,46 @@
+body {
+    font-size: large;
+}
+#converter {
+    position: absolute;
+    right: 40%;
+    margin-top: 100px;
+}
+button, select, option {
+    font-size: large;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+}
+#forms {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
 form, #switch-imperial-metric {
     display: inline-block;
+}
+form, input {
+    margin-top: 30px;
+}
+select, #switch-imperial-metric {
+    margin-top: 10px;
+}
+input {
+    width: 100px;
+    height: 20px;
+    -moz-appearance: textfield;
+    font-size: large;
+    padding: 7.5px;
+    margin-bottom: 30px;
+}
+#imperial-value {
+    margin-left: 85px;
+}
+#metric, #metric-value {
+    margin-left: 30px;
+}
+#imperial, #imperial-value {
+    margin-right: 30px;
 }

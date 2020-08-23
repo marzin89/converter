@@ -9,38 +9,39 @@
             <button id="length">Length</button>
             <button id="weight">Weight</button>
             <button id="volume">Volume</button>
-            <div>
-            <form id="metric">
+            <div id="forms">
                 <div>
-                    <label for="length-metric">Metric</label>
+                <form id="metric">
+                    <div>
+                        <label for="length-metric">Metric</label>
+                    </div>
+                    <div>
+                        <select id="length-metric" name="length-metric">
+                            <option id="millimeters">Millimeters</option>
+                            <option id="centimeters">Centimeters</option>
+                            <option id="meters">Meters</option>
+                            <option id="kilometers">Kilometers</option>
+                        </select>
+                    </div>
+                </form>
+                <button id="switch-imperial-metric"><=></button>
+                <form id="imperial">
+                    <div>
+                        <label for="length-imperial">Imperial</label>
+                    </div>
+                    <div>
+                        <select id="length-imperial" name="length-imperial">
+                            <option id="inches">Inches</option>
+                            <option id="feet">Feet</option>
+                            <option id="yards">Yards</option>
+                            <option id="miles">Miles</option>
+                        </select>
+                    </div>
+                </form>
                 </div>
-                <div>
-                    <select id="length-metric" name="length-metric">
-                        <option id="millimeters">Millimeters</option>
-                        <option id="centimeters">Centimeters</option>
-                        <option id="meters">Meters</option>
-                        <option id="kilometers">Kilometers</option>
-                    </select>
-                </div>
-            </form>
-            <button id="switch-imperial-metric"><=></button>
-            <form id="imperial">
-                <div>
-                    <label for="length-imperial">Imperial</label>
-                </div>
-                <div>
-                    <select id="length-imperial" name="length-imperial">
-                        <option id="inches">Inches</option>
-                        <option id="feet">Feet</option>
-                        <option id="yards">Yards</option>
-                        <option id="miles">Miles</option>
-                    </select>
-                </div>
-            </form>
+                <input id="metric-value" type="number">
+                <input id="imperial-value" type="number">
             </div>
-            <input type="number">
-            <input type="number">
         </div>
-
     </body>
 </html>
