@@ -13,10 +13,11 @@ body, button {
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
+    background-color:lightsalmon;
 }
 #length {
     border: none;
-    background-color: lightsalmon;
+    background-color: salmon;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 5px;
@@ -36,8 +37,8 @@ select, option {
 #forms {
     border-style: solid;
     border-width: 1px;
-    border-color: lightsalmon;
-    background-color: lightsalmon;
+    border-color: salmon;
+    background-color: salmon;
 }
 form, #switch-imperial-metric {
     display: inline-block;
