@@ -10,6 +10,11 @@ body, button {
 }
 #weight, #volume, #temperature {
     margin-left: -6px;
+    border: none;
+}
+#length {
+    border: none;
+    background-color: lightsalmon;
 }
 select, option {
     font-size: large;
@@ -21,7 +26,8 @@ select, option {
 #forms {
     border-style: solid;
     border-width: 1px;
-    border-radius: 5px;
+    border-color: lightsalmon;
+    background-color: lightsalmon;
 }
 form, #switch-imperial-metric {
     display: inline-block;
