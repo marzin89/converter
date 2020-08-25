@@ -347,11 +347,17 @@ function switchMetricImperial() {
 
 const convertBtn = document.getElementById('convert');
 
+convertBtn.addEventListener('click', convertLengthMetricToImperial);
+
 const metricValue = document.getElementById('metric-value');
 
 metricValue.addEventListener('input', isValueANumber);
 
 const imperialValue = document.getElementById('imperial-value');
+
+const metricUnits = document.getElementById('length-metric');
+
+const imperialUnits = document.getElementById('length-imperial');
 
 const message = document.querySelector('span');
 
@@ -364,5 +370,108 @@ function isValueANumber() {
     } else {
 
         message.innerHTML = '';
+    }
+}
+
+function convertLengthMetricToImperial() {
+
+    if (isNaN(metricValue.value) == false) {
+
+        if (metricUnits[metricUnits.selectedIndex].text == 'Millimeters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Inches') {
+
+            imperialValue.value = metricValue.value / 25.4;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Millimeters' && 
+
+        imperialUnits[imperialUnits.selectedIndex].text == 'Feet') {
+
+            imperialValue.value = metricValue.value / 304.8;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Millimeters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Yards') {
+
+            imperialValue.value = metricValue.value / 914.4;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Millimeters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Miles') {
+
+            imperialValue.value = metricValue.value / 1609344;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Centimeters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Inches') {
+
+            imperialValue.value = metricValue.value / 2.54;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Centimeters' &&
+
+        imperialUnits[imperialUnits.selectedIndex].text == 'Feet') {
+
+            imperialValue.value = metricValue.value / 30.48;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Centimeters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Yards') {
+
+            imperialValue.value = metricValue.value / 91.44;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Centimeters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Miles') {
+
+            imperialValue.value = metricValue.value / 160934.4;
+        
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Meters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Inches') {
+
+            imperialValue.value = metricValue.value * 39.3700787;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Meters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Feet') {
+
+            imperialValue.value = metricValue.value * 3.2808399;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Meters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Yards') {
+
+            imperialValue.value = metricValue.value * 1.0936133;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Meters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Miles') {
+
+            imperialValue.value = metricValue.value * 0.000621371192;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Kilometers' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Inches') {
+
+            imperialValue.value = metricValue.value * 39370.0787;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Kilometers' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Feet') {
+
+            imperialValue.value = metricValue.value * 3280.8399;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Kilometers' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Yards') {
+
+            imperialValue.value = metricValue.value * 1093.6133;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Kilometers' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Miles') {
+
+            imperialValue.value = metricValue.value * 0.621371192;
+        }
     }
 }
