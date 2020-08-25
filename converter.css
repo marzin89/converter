@@ -23,7 +23,7 @@ body, button {
     padding-top: 5px;
     padding-bottom: 5px;
 }
-#switch-imperial-metric {
+#switch-imperial-metric, #convert {
     padding-top: 2.5px;
     padding-bottom: 2.5px;
 }
@@ -55,11 +55,15 @@ input {
     -moz-appearance: textfield;
     font-size: large;
     padding: 7.5px;
-    margin-bottom: 35px;
 }
 #imperial-value {
     margin-left: 85px;
 }
 #metric, #metric-value {
     margin-left: 35px;
+}
+#convert {
+    margin-top: 10px;
+    margin-left: 35px;
+    margin-bottom: 35px;
 }

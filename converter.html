@@ -14,7 +14,7 @@
                 <div>
                 <form id="metric">
                     <div>
-                        <label for="length-metric">Metric</label>
+                        <label id="label-metric"for="length-metric">Metric</label>
                     </div>
                     <div>
                         <select id="length-metric" name="length-metric">
@@ -28,7 +28,7 @@
                 <button id="switch-imperial-metric"><=></button>
                 <form id="imperial">
                     <div>
-                        <label for="length-imperial">Imperial</label>
+                        <label id="label-imperial" for="length-imperial">Imperial</label>
                     </div>
                     <div>
                         <select id="length-imperial" name="length-imperial">
@@ -42,6 +42,10 @@
                 </div>
                 <input id="metric-value" type="number">
                 <input id="imperial-value" type="number">
+                <div>
+                    <button id="convert">Convert</button>
+                    <span></span>
+                </div>
             </div>
         </div>
         <script src="converter.js"></script>
