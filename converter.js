@@ -344,3 +344,25 @@ function switchMetricImperial() {
 
     switchMetricImperialTemperature();    
 }
+
+const convertBtn = document.getElementById('convert');
+
+const metricValue = document.getElementById('metric-value');
+
+metricValue.addEventListener('input', isValueANumber);
+
+const imperialValue = document.getElementById('imperial-value');
+
+const message = document.querySelector('span');
+
+function isValueANumber() {
+
+    if (isNaN(metricValue.value) || metricValue.value.slice(-1) == '.') {
+
+        message.innerHTML = 'Please enter a valid number!';
+
+    } else {
+
+        message.innerHTML = '';
+    }
+}
