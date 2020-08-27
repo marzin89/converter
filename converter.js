@@ -112,7 +112,7 @@ function updateUnits() {
 
         optionFourMetric.innerHTML = 'Liters';
 
-        optionOneImperial.innerHTML = 'Cups';
+        optionOneImperial.innerHTML = 'Fl oz';
 
         optionTwoImperial.innerHTML = 'Pints';
 
@@ -266,7 +266,7 @@ function switchMetricImperialVolume() {
 
     if (optionOneMetric.innerHTML == 'Milliliters') {
 
-        optionOneMetric.innerHTML = 'Cups';
+        optionOneMetric.innerHTML = 'Fl oz';
 
         optionTwoMetric.innerHTML = 'Pints';
 
@@ -286,7 +286,7 @@ function switchMetricImperialVolume() {
 
         labelImperial.innerHTML = 'Metric';
 
-    } else if (optionOneMetric.innerHTML == 'Cups') {
+    } else if (optionOneMetric.innerHTML == 'Fl oz') {
 
         optionOneMetric.innerHTML = 'Milliliters';
 
@@ -296,7 +296,7 @@ function switchMetricImperialVolume() {
 
         optionFourMetric.innerHTML = 'Liters';
         
-        optionOneImperial.innerHTML = 'Cups';
+        optionOneImperial.innerHTML = 'Fl oz';
 
         optionTwoImperial.innerHTML = 'Pints'
 
@@ -347,7 +347,7 @@ function switchMetricImperial() {
 
 const convertBtn = document.getElementById('convert');
 
-convertBtn.addEventListener('click', convertWeightImperialToMetric);
+convertBtn.addEventListener('click', convertVolumeMetricToImperial);
 
 const metricValue = document.getElementById('metric-value');
 
@@ -781,6 +781,109 @@ function convertWeightImperialToMetric() {
         imperialUnits[imperialUnits.selectedIndex].text == 'Tons') {
 
             imperialValue.value = metricValue.value * 1.01604608;
+        }
+    }
+}
+
+function convertVolumeMetricToImperial() {
+
+    if (isNaN(metricValue.value) == false) {
+
+        if (metricUnits[metricUnits.selectedIndex].text == 'Milliliters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Fl oz') {
+
+            imperialValue.value = metricValue.value * 0.0351950797;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Milliliters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Pints') {
+
+            imperialValue.value = metricValue.value * 0.001759754;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Milliliters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Quarts') {
+
+            imperialValue.value = metricValue.value * 0.000879877;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Milliliters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Gallons') {
+
+            imperialValue.value = metricValue.value * 0.0002199692;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Centiliters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Fl oz') {
+
+            imperialValue.value = metricValue.value * 0.351950797;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Centiliters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Pints') {
+
+            imperialValue.value = metricValue.value * 0.01759754;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Centiliters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Quarts') {
+
+            imperialValue.value = metricValue.value * 0.00879877;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Centiliters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Gallons') {
+
+            imperialValue.value = metricValue.value * 0.002199692;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Deciliters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Fl oz') {
+
+            imperialValue.value = metricValue.value * 3.51950797;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Deciliters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Pints') {
+
+            imperialValue.value = metricValue.value * 0.1759754;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Deciliters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Quarts') {
+
+            imperialValue.value = metricValue.value * 0.0879877;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Deciliters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Gallons') {
+
+            imperialValue.value = metricValue.value * 0.02199692;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Liters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Fl oz') {
+
+            imperialValue.value = metricValue.value * 35.195079728;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Liters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Pints') {
+
+            imperialValue.value = metricValue.value * 1.7597539864;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Liters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Quarts') {
+
+            imperialValue.value = metricValue.value * 0.8798769932;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Liters' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Gallons') {
+
+            imperialValue.value = metricValue.value * 0.2199692483;
         }
     }
 }
