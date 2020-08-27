@@ -347,7 +347,7 @@ function switchMetricImperial() {
 
 const convertBtn = document.getElementById('convert');
 
-convertBtn.addEventListener('click', convertWeightMetricToImperial);
+convertBtn.addEventListener('click', convertWeightImperialToMetric);
 
 const metricValue = document.getElementById('metric-value');
 
@@ -678,6 +678,109 @@ function convertWeightMetricToImperial() {
         imperialUnits[imperialUnits.selectedIndex].text == 'Long ton') {
 
             imperialValue.value = metricValue.value * 0.9842073304;
+        }
+    }
+}
+
+function convertWeightImperialToMetric() {
+
+    if (isNaN(metricValue.value) == false) {
+
+        if (metricUnits[metricUnits.selectedIndex].text == 'Ounces' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Milligrams') {
+
+            imperialValue.value = metricValue.value * 28349.5;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Ounces' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Grams') {
+
+            imperialValue.value = metricValue.value * 28.3495;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Ounces' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Kilograms') {
+
+            imperialValue.value = metricValue.value * 0.0283495;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Ounces' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Tons') {
+
+            imperialValue.value = metricValue.value * 0.0000283495;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Pounds' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Milligrams') {
+
+            imperialValue.value = metricValue.value * 453592;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Pounds' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Grams') {
+
+            imperialValue.value = metricValue.value * 453.592;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Pounds' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Kilograms') {
+
+            imperialValue.value = metricValue.value * 0.453592;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Pounds' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Tons') {
+
+            imperialValue.value = metricValue.value * 0.000453592;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Short ton' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Milligrams') {
+
+            imperialValue.value = metricValue.value * 907184000;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Short ton' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Grams') {
+
+            imperialValue.value = metricValue.value * 907184;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Short ton' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Kilograms') {
+
+            imperialValue.value = metricValue.value * 907.184;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Short ton' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Tons') {
+
+            imperialValue.value = metricValue.value * 0.907184;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Long ton' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Milligrams') {
+
+            imperialValue.value = metricValue.value * 1016046080;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Long ton' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Grams') {
+
+            imperialValue.value = metricValue.value * 1016046.08;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Long ton' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Kilograms') {
+
+            imperialValue.value = metricValue.value * 1016.04608;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Long ton' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Tons') {
+
+            imperialValue.value = metricValue.value * 1.01604608;
         }
     }
 }
