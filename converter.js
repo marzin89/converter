@@ -347,7 +347,7 @@ function switchMetricImperial() {
 
 const convertBtn = document.getElementById('convert');
 
-convertBtn.addEventListener('click', convertVolumeImperialToMetric);
+convertBtn.addEventListener('click', convertTemperature);
 
 const metricValue = document.getElementById('metric-value');
 
@@ -987,6 +987,25 @@ function convertVolumeImperialToMetric() {
         imperialUnits[imperialUnits.selectedIndex].text == 'Liters') {
 
             imperialValue.value = metricValue.value * 4.54609;
+        }
+    }
+}
+
+function convertTemperature() {
+
+    if (isNaN(metricValue.value) == false) {
+
+        if (metricUnits[metricUnits.selectedIndex].text == 'Celsius' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Farenheit') {
+
+            imperialValue.value = metricValue.value * 1.8 + 32;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Farenheit' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Celsius') {
+
+            imperialValue.value = (metricValue.value - 32) * 5 / 9;
         }
     }
 }
