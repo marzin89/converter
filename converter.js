@@ -130,7 +130,7 @@ function updateUnits() {
 
         optionFourMetric.innerHTML = '';
 
-        optionOneImperial.innerHTML = 'Farenheit';
+        optionOneImperial.innerHTML = 'Fahrenheit';
 
         optionTwoImperial.innerHTML = '';
 
@@ -314,7 +314,7 @@ function switchMetricImperialTemperature() {
 
     if (optionOneMetric.innerHTML == 'Celsius') {
 
-        optionOneMetric.innerHTML = 'Farenheit';
+        optionOneMetric.innerHTML = 'Fahrenheit';
 
         optionOneImperial.innerHTML = 'Celsius';
 
@@ -322,11 +322,11 @@ function switchMetricImperialTemperature() {
 
         labelImperial.innerHTML = 'Metric';
 
-    } else if (optionOneMetric.innerHTML == 'Farenheit') {
+    } else if (optionOneMetric.innerHTML == 'Fahrenheit') {
 
         optionOneMetric.innerHTML = 'Celsius';
 
-        optionOneImperial.innerHTML = 'Farenheit';
+        optionOneImperial.innerHTML = 'Fahrenheit';
 
         labelMetric.innerHTML = 'Metric';
 
@@ -997,11 +997,11 @@ function convertTemperature() {
 
         if (metricUnits[metricUnits.selectedIndex].text == 'Celsius' &&
         
-        imperialUnits[imperialUnits.selectedIndex].text == 'Farenheit') {
+        imperialUnits[imperialUnits.selectedIndex].text == 'Fahrenheit') {
 
             imperialValue.value = metricValue.value * 1.8 + 32;
 
-        } else if (metricUnits[metricUnits.selectedIndex].text == 'Farenheit' &&
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Fahrenheit' &&
         
         imperialUnits[imperialUnits.selectedIndex].text == 'Celsius') {
 
