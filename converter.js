@@ -347,7 +347,7 @@ function switchMetricImperial() {
 
 const convertBtn = document.getElementById('convert');
 
-convertBtn.addEventListener('click', convertVolumeMetricToImperial);
+convertBtn.addEventListener('click', convertVolumeImperialToMetric);
 
 const metricValue = document.getElementById('metric-value');
 
@@ -884,6 +884,109 @@ function convertVolumeMetricToImperial() {
         imperialUnits[imperialUnits.selectedIndex].text == 'Gallons') {
 
             imperialValue.value = metricValue.value * 0.2199692483;
+        }
+    }
+}
+
+function convertVolumeImperialToMetric() {
+
+    if (isNaN(metricValue.value) == false) {
+
+        if (metricUnits[metricUnits.selectedIndex].text == 'Fl oz' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Milliliters') {
+
+            imperialValue.value = metricValue.value * 28.4130625;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Fl oz' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Centiliters') {
+
+            imperialValue.value = metricValue.value * 2.84130625;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Fl oz' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Deciliters') {
+
+            imperialValue.value = metricValue.value * 0.284130625;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Fl oz' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Liters') {
+
+            imperialValue.value = metricValue.value * 0.0284130625;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Pints' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Milliliters') {
+
+            imperialValue.value = metricValue.value * 568.26125;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Pints' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Centiliters') {
+
+            imperialValue.value = metricValue.value * 56.826125;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Pints' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Deciliters') {
+
+            imperialValue.value = metricValue.value * 5.6826125;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Pints' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Liters') {
+
+            imperialValue.value = metricValue.value * 0.56826125;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Quarts' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Milliliters') {
+
+            imperialValue.value = metricValue.value * 1136.5225;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Quarts' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Centiliters') {
+
+            imperialValue.value = metricValue.value * 113.65225;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Quarts' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Deciliters') {
+
+            imperialValue.value = metricValue.value * 11.365225;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Quarts' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Liters') {
+
+            imperialValue.value = metricValue.value * 1.1365225;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Gallons' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Milliliters') {
+
+            imperialValue.value = metricValue.value * 4546.09;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Gallons' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Centiliters') {
+
+            imperialValue.value = metricValue.value * 454.609;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Gallons' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Deciliters') {
+
+            imperialValue.value = metricValue.value * 45.4609;
+
+        } else if (metricUnits[metricUnits.selectedIndex].text == 'Gallons' &&
+        
+        imperialUnits[imperialUnits.selectedIndex].text == 'Liters') {
+
+            imperialValue.value = metricValue.value * 4.54609;
         }
     }
 }
